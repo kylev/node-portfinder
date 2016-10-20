@@ -26,7 +26,7 @@ module.exports = function(servers, callback) {
   async.whilst(
     function () { return base < 32773; },
     function (next) {
-      var hosts = ['localhost'];
+      var hosts = ['0.0.0.0', '::']; // default hosts documented @ https://github.com/nodejs/node/blob/4b65a65e75f48ff447cabd5500ce115fb5ad4c57/doc/api/net.md#L231
       while (hosts.length > 1) { servers.push(createServer(base, hosts.shift())); }
       servers.push(createServer(base, hosts.shift(), next)); // call next for host
       base++;
