@@ -21,6 +21,7 @@
     "mkdirp": "0.5.x"
   },
   "devDependencies": {
+    "bluebird": "^3.4.6",
     "glob": "^6.0.4",
     "vows": "0.8.0"
   },
